@@ -9,6 +9,7 @@
 %-----------------------------------------------------------------
 % Math Tools 
 \RequirePackage{mathtools, amssymb, amsmath, amsfonts, amsthm}
+\RequirePackage{gensymb}
 \RequirePackage{mathrsfs}
 \RequirePackage{cancel}
 \RequirePackage{bm, bbold} 
@@ -23,6 +24,9 @@
 \newcommand\Q{\ensuremath{\mathbb{Q}}}
 \newcommand\C{\ensuremath{\mathbb{C}}}
 \DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\sininv}{sin\,inverse}
+\DeclareMathOperator{\cosinv}{cos\,inverse}
+\DeclareMathOperator{\taninv}{tan\,inverse}
 \RequirePackage{systeme}
 \let\svlim\lim\def\lim{\svlim\limits}
 \let\implies\Rightarrow
@@ -184,12 +188,12 @@
 %------------------------------------------------------------------------------------------
 % For Uncolored Boxes
 %
-% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmgreenbox}
-% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmredbox}
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={  } ]{thmgreenbox}
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={  } ]{thmredbox}
 % \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont]{thmbluebox}
 % \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont]{thmblueline}
 % \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ rightline=false, topline=false, bottomline=false, }, qed=\qedsymbol ]{thmproofbox}
-% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ nobreak, rightline=false, topline=false, bottomline=false } ]{thmexplanationbox}
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ rightline=false, topline=false, bottomline=false } ]{thmexplanationbox}
 
 \declaretheorem[style=thmgreenbox, name=Definition]{definition}
 \declaretheorem[style=thmbluebox, numbered=no, name=Example]{eg}
