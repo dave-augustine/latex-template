@@ -9,6 +9,7 @@
 %-----------------------------------------------------------------
 % Math Tools 
 \RequirePackage{mathtools, amssymb, amsmath, amsfonts, amsthm}
+\RequirePackage{gensymb}
 \RequirePackage{mathrsfs}
 \RequirePackage{cancel}
 \RequirePackage{bm, bbold} 
@@ -22,6 +23,9 @@
 \renewcommand\O{\ensuremath{\emptyset}}
 \newcommand\Q{\ensuremath{\mathbb{Q}}}
 \newcommand\C{\ensuremath{\mathbb{C}}}
+\DeclareMathOperator{\sininv}{sin\,inverse}
+\DeclareMathOperator{\cosinv}{cos\,inverse}
+\DeclareMathOperator{\taninv}{tan\,inverse}
 \DeclareMathOperator{\sgn}{sgn}
 \RequirePackage{systeme}
 \let\svlim\lim\def\lim{\svlim\limits}
@@ -125,7 +129,7 @@
 \theoremstyle{definition}
 
 \declaretheoremstyle[
-    headfont=\bfseries\large\sffamily\color{ForestGreen!70!black}, bodyfont=\normalfont,
+    headfont=\bfseries\sffamily\color{ForestGreen!70!black}, bodyfont=\normalfont,
     mdframed={
         linewidth=2pt,
         rightline=false, topline=false, bottomline=false,
@@ -134,7 +138,7 @@
 ]{thmgreenbox}
 
 \declaretheoremstyle[
-    headfont=\bfseries\large\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
     mdframed={
         linewidth=2pt,
         rightline=false, topline=false, bottomline=false,
@@ -143,7 +147,7 @@
 ]{thmbluebox}
 
 \declaretheoremstyle[
-    headfont=\bfseries\large\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
     mdframed={
         linewidth=2pt,
         rightline=false, topline=false, bottomline=false,
@@ -152,7 +156,7 @@
 ]{thmblueline}
 
 \declaretheoremstyle[
-    headfont=\bfseries\large\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
+    headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
     mdframed={
         linewidth=2pt,
         rightline=false, topline=false, bottomline=false,
@@ -161,7 +165,7 @@
 ]{thmredbox}
 
 \declaretheoremstyle[
-    headfont=\bfseries\large\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
+    headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
     numbered=no,
     mdframed={
         linewidth=2pt,
@@ -172,7 +176,7 @@
 ]{thmproofbox}
 
 \declaretheoremstyle[
-    headfont=\bfseries\large\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
     numbered=no,
     mdframed={
         linewidth=2pt,
@@ -184,12 +188,12 @@
 %------------------------------------------------------------------------------------------
 % For Uncolored Boxes
 
-% \declaretheoremstyle[headfont=\bfseries\large\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmgreenbox}
-% \declaretheoremstyle[headfont=\bfseries\large\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmredbox}
-% \declaretheoremstyle[headfont=\bfseries\large\sffamily, bodyfont=\normalfont]{thmbluebox}
-% \declaretheoremstyle[headfont=\bfseries\large\sffamily, bodyfont=\normalfont]{thmblueline}
-% \declaretheoremstyle[headfont=\bfseries\large\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ rightline=false, topline=false, bottomline=false, }, qed=\qedsymbol ]{thmproofbox}
-% \declaretheoremstyle[headfont=\bfseries\large\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ nobreak, rightline=false, topline=false, bottomline=false } ]{thmexplanationbox}
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ } ]{thmgreenbox}
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={  } ]{thmredbox}
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont]{thmbluebox}
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont]{thmblueline}
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ rightline=false, topline=false, bottomline=false, }, qed=\qedsymbol ]{thmproofbox}
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ rightline=false, topline=false, bottomline=false } ]{thmexplanationbox}
 
 \declaretheorem[style=thmgreenbox, name=Definition]{definition}
 \declaretheorem[style=thmbluebox, numbered=no, name=Example]{eg}
