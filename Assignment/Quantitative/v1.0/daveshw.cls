@@ -189,7 +189,7 @@
 % For Uncolored Boxes
 
 % \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ } ]{thmgreenbox}
-% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={  } ]{thmredbox}
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ backgroundcolor=Gray!8 } ]{thmredbox}
 % \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont]{thmbluebox}
 % \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont]{thmblueline}
 % \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ rightline=false, topline=false, bottomline=false, }, qed=\qedsymbol ]{thmproofbox}
