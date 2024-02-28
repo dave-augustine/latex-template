@@ -327,7 +327,7 @@
 % figure support
 \RequirePackage{import}
 \RequirePackage{xifthen}
-\pdfminorversion=7
+%\pdfminorversion=7
 \RequirePackage{pdfpages}
 \RequirePackage{transparent}
 \newcommand{\incfig}[1]{%
