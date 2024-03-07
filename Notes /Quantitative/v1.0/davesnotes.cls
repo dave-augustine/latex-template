@@ -13,6 +13,7 @@
 \RequirePackage{mathrsfs}
 \RequirePackage{cancel}
 \RequirePackage{bm, bbold} 
+\RequirePackage{listings} % Code Implementation
 % \RequirePackage{physics} % Physics Dependencies
 % \RequirePackage{mhchem} % Chemistry Dependencies
 
@@ -57,6 +58,7 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{textcomp}
+\RequirePackage{fontspec}
 \RequirePackage{url}
 \RequirePackage{parskip}
 \RequirePackage{emptypage}
@@ -66,6 +68,7 @@
 \RequirePackage{multicol}
 \RequirePackage[usenames,dvipsnames]{xcolor}
 \RequirePackage[shortlabels]{enumitem}
+\newfontfamily{\jetbrainsmono}{JetBrains Mono}[Contextuals=Alternate]
 \newcommand\myshade{90}
 \colorlet{mylinkcolor}{NavyBlue}
 \colorlet{mycitecolor}{Aquamarine}
@@ -117,6 +120,24 @@
 
 \tikzset{
     force/.style={thick, {Circle[length=2pt]}-stealth, shorten <=-1pt}
+}
+
+%Code
+\lstdefinestyle{customcodeblock}{    
+    frame=single,
+    basicstyle=\ttfamily\small\jetbrainsmono,
+    breaklines=true,
+    numbers=left,
+    numberstyle=\color{gray},
+    tabsize=4,
+    backgroundcolor=\color{lightgray},
+    commentstyle=\color{green}\itshape,
+    keywordstyle=\color{blue}\bfseries,
+    stringstyle=\color{purple},
+    literate={*}{\footnotesize*}{1},
+    directivestyle=\color{brown},
+    morecomment=[l][\color{brown}]{\#}, 
+    morekeywords={constexpr, noexcept, nullptr}, 
 }
 
 % theorems
@@ -255,7 +276,7 @@
 
 \def\testdateparts#1{\dateparts#1\relax}
 \def\dateparts#1 #2 #3 #4 #5\relax{
-    {\small\textsf{\mbox{#1 #2 #3 #5}}}
+    {\small\textsf{\mbox{#1 #2 #3 #4 #5}}}
 }
 
 \def\@lesson{}%
